@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Bing - Elegant Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        h1 {
+            color: #4285f4;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            animation: slideIn 1s forwards;
+            opacity: 0;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        img { 
+            max-width: 30%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .quote {
+            font-style: italic;
+            color: #777;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Bing</h1>
+        <a href="https://www.bing.in/"><img src="binglogo.jpg" alt="Google Logo"></a>
+        <p class="quote">"Innovation distinguishes between a leader and a follower." - Steve Jobs</p>
+        <p>
+        Bing is a web search engine developed by Microsoft, launched in 2009 as a successor to Live Search. It aims to deliver a comprehensive search experience with features like image and video search, maps, and local business listings</p>
+        <p>Bing integrates with Microsoft services, including Office and Cortana, enhancing productivity and user convenience. The search engine also offers a rewards program, allowing users to earn points for searches and activities.</p>
+        <p>With a focus on user-friendly design and improved algorithms, Bing continues to evolve, striving to compete with other leading search engines like Google.
+        </p>
+    </div>
+</body>
+</html>

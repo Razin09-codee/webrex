@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - WEBREX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f0e4ff, #ffe6e6);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #4CAF50;
+      margin: 0;
+      padding: 10px;
+    }
+
+    p {
+      max-width: 700px;
+      text-align: center;
+      font-size: 18px;
+      margin: 20px;
+      line-height: 1.6;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1.5s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .highlight {
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    .explore-btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      color: white;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .explore-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      padding: 0 20px;
+    }
+
+    .card {
+      position: relative;
+      background: white;
+      padding: 20px;
+      margin: 15px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      color: black;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Ripple Effect */
+    .card::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 123, 255, 0.1);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card:hover::after {
+      opacity: 1;
+    }
+
+    .card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      margin: 40px 0 20px;
+      font-size: 14px;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      fadeElements.forEach((el, index) => {
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, index * 200);
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <h1>Welcome to WEBREX</h1>
+  <h2 class="fade-in">Discover the Best of the Web, Curated for You</h2>
+
+  <p class="fade-in">
+    At <span class="highlight">WEBREX</span>, we are passionate about showcasing the top websites in every category—from technology to lifestyle, news, and entertainment. 
+    Our dedicated team has been curating these lists for over 2 months to bring you the best of the internet, all in one place.
+  </p>
+
+  <button class="explore-btn fade-in">Explore Our Top 10 Lists</button>
+
+  <div class="card-container fade-in">
+    <a href="seach engines infowebsite info.html" class="card">
+      <h3>Top 10 Search Engines</h3>
+      <p>Stay updated with the latest in technology.</p>
+    </a>
+
+    <a href="news website.html" class="card">
+      <h3>Top 10 News Websites</h3>
+      <p>Catch up with the latest news from around the world.</p>
+    </a>
+
+    <a href="#" class="card">
+      <h3>Top 10 Entertainment Websites</h3>
+      <p>From movies to music, find all things entertainment.</p>
+    </a>
+
+    <a href="top 10 visited website.html" class="card">
+      <h3>Top 10 Visited Websites</h3>
+      <p>The most visited in 2024.</p>
+    </a>
+
+    <a href="education website.html" class="card">
+      <h3>Top 10 Education Websites</h3>
+      <p>Resources for learning and personal growth.</p>
+    </a>
+
+    <a href="top 10 online shopping.html" class="card">
+      <h3>Top 10 Shopping Websites</h3>
+      <p>Explore the best places to shop online.</p>
+    </a>
+
+    <a href="0social media.html" class="card">
+      <h3>Top 10 Social Media Platforms</h3>
+      <p>Connect with others on popular social networks.</p>
+    </a>
+
+    <a href="useless website.html" class="card">
+      <h3>Top 10 Useless Websites</h3>
+      <p>These websites are just made for fun.</p>
+    </a>
+
+    <a href="banking website.html" class="card">
+      <h3>Top 10 Banking Websites</h3>
+      <p>Stay on top of your finances and investments.</p>
+    </a>
+
+    <a href="#" class="card">
+      <h3>Top 10 Horror Websites</h3>
+      <p>Websites that will give you the chills.</p>
+    </a>
+  </div>
+
+  <footer>
+    &copy; 2024 WEBREX. All rights reserved. Discovering the web's best, one list at a time.
+  </footer>
+
+</body>
+</html>

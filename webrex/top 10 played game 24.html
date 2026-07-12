@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WEBREX – Top Games</title>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2c2c3c);
+      color: white;
+      animation: bgShift 20s ease infinite;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 40px;
+      color: #ffffff;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #282c34;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease, opacity 0.4s;
+      opacity: 0;
+    }
+
+    .card:hover::before {
+      width: 200%;
+      height: 200%;
+      opacity: 1;
+    }
+
+    .card img {
+      width: 90px;
+      height: 90px;
+      border-radius: 14px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card p {
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 600px) {
+      .card img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Top Games Collection</h1>
+
+  <nav class="main-nav">
+    <a href="#" class="card" data-aos="fade-up">
+      <img src="call of duty.jfif" alt="Call of Duty" />
+      <p>Call of Duty</p>
+    </a>
+    <a href="#" class="card" data-aos="fade-up" data-aos-delay="50">
+      <img src="fornite.png" alt="Fortnite" />
+      <p>Fortnite</p>
+    </a>
+    <a href="#" class="card" data-aos="fade-up" data-aos-delay="100">
+      <img src="league of legends.jpg" alt="League of Legends" />
+      <p>League of Legends</p>
+    </a>
+    <a href="#" class="card" data-aos="fade-up" data-aos-delay="150">
+      <img src="minecraft.png" alt="Minecraft" />
+      <p>Minecraft</p>
+    </a>
+    <a href="#" class="card" data-aos="fade-up" data-aos-delay="200">
+      <img src="valorant.png" alt="Valorant" />
+      <p>Valorant</p>
+    </a>
+    <a href="#" class="card" data-aos="fade-up" data-aos-delay="250">
+      <img src="Genshin-Impact.png" alt="Genshin Impact" />
+      <p>Genshin Impact</p>
+    </a>
+    <a href="#" class="card" data-aos="fade-up" data-aos-delay="300">
+      <img src="apex legend.png" alt="Apex Legends" />
+      <p>Apex Legends</p>
+    </a>
+    <a href="#" class="card" data-aos="fade-up" data-aos-delay="350">
+      <img src="roblox.jfif" alt="Roblox" />
+      <p>Roblox</p>
+    </a>
+    <a href="#" class="card" data-aos="fade-up" data-aos-delay="400">
+      <img src="baldur gate 3.png" alt="Baldur's Gate 3" />
+      <p>Baldur's Gate 3</p>
+    </a>
+    <a href="#" class="card" data-aos="fade-up" data-aos-delay="450">
+      <img src="diablo 4.jfif" alt="Diablo 4" />
+      <p>Diablo 4</p>
+    </a>
+  </nav>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>

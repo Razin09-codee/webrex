@@ -1,0 +1,272 @@
+.BODY{
+    background: linear-gradient(to right, #520c52,#6d1373,#222122,black);
+    overflow-x: hidden;
+}
+.NA{
+    height: 1cm;
+    width: 36.5cm;
+    background-color: #CBC3E3;
+    position: relative;
+    bottom: 0.5cm;
+    right: 0.5cm;
+}
+.NB{
+    height: 1.5cm;
+    width: 36.5cm;
+    background-color: #99A5B1;
+    position: relative;
+    bottom: 0.5cm;
+    right: 0.5cm;
+}
+.A{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -1cm;
+    right: -5cm;
+   
+}
+
+.Asub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.B{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.04cm;
+   
+}
+
+.Bsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.C{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+
+.Csub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.D{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+  
+.Dsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.E{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+
+.Esub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.F{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+
+.Fsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.G{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+
+.Gsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.H{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+ 
+.Hsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.I{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+
+.Isub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.J{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+
+.Jsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.all-nav{
+    position: relative;
+    left: 1cm;
+}
+.SHUDDER-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Hashima_Island-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.NIGHTMARE-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.CRY_OF_FEAR-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Amnesia_The_Dark_Descent-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Creepypasta-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.The_Darkest_Blog-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.SHUT_UP_AND_GO_TO_BED-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.FrightFind-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Homicide_Monitor-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.PA{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transform: scale(2.5);
+    position: absolute;
+    bottom: 1.5cm;
+    right: 10cm;
+    color: black;
+}

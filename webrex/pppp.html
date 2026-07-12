@@ -1,0 +1,49 @@
+<?php
+// Initialize variables to store feedback message
+$successMessage = '';
+$errorMessage = '';
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form data
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $feedback = htmlspecialchars(trim($_POST['feedback']));
+
+    // Basic validation
+    if (!empty($name) && !empty($email) && !empty($feedback)) {
+        // You can save the feedback to a file or send it via email
+        // Here we will save to a text file
+        $file = 'feedback.txt';
+        $entry = "Name: $name\nEmail: $email\nFeedback: $feedback\n\n";
+        
+        if (file_put_contents($file, $entry, FILE_APPEND | LOCK_EX)) {
+            $successMessage = "Thank you for your feedback!";
+        } else {
+            $errorMessage = "Sorry, there was an error saving your feedback.";
+        }
+    } else {
+        $errorMessage = "All fields are required.";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Submission</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Submission</h1>
+        
+        <!-- Display success or error messages -->
+        <div class="message"><?php echo !empty($successMessage) ? $successMessage : $errorMessage; ?></div>
+
+        <a href="feedbackq.html">Go Back to Feedback Form</a> <!-- Link to return to the form -->
+    </div>
+</body>
+</html>

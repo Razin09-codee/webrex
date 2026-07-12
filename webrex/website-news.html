@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest Web Development News</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdf7f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c7a7b, #3182ce);
+      color: white;
+      padding: 40px 20px 20px;
+      text-align: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .toggle-btn {
+      display: block;
+      margin: 0 auto 30px auto;
+      padding: 12px 28px;
+      background-color: #3182ce;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .toggle-btn:hover {
+      background-color: #2b6cb0;
+      transform: scale(1.05);
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .news-item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    }
+
+    .news-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-item.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.95);
+    }
+
+    .news-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+
+    .news-item h2 {
+      font-size: 1.25rem;
+      margin: 10px 0 12px;
+      color: #2c5282;
+    }
+
+    .news-item h2 a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s;
+    }
+
+    .news-item h2 a:hover {
+      color: #2b6cb0;
+      text-decoration: underline;
+    }
+
+    .news-item p {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .toggle-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+
+      .news-item h2 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+
+  <script>
+    function toggleNews() {
+      document.querySelectorAll('.news-item').forEach(item => {
+        item.classList.toggle('hidden');
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Top 10 Latest News in Web Development</h1>
+  </header>
+
+  <div class="container">
+    <button class="toggle-btn" onclick="toggleNews()">Toggle News Visibility</button>
+
+    <div class="news-grid">
+      <!-- Repeatable News Items -->
+      <div class="news-item">
+        <img src="google-logo-rumble.jpg" alt="Google's October 2024 Core Update">
+        <h2><a href="https://www.seroundtable.com/category/google-updates" target="_blank">Google's October 2024 Core Update</a></h2>
+        <p>Google has released its October 2024 Core Update, aiming to enhance search result quality. Monitor your site's performance to track ranking changes.</p>
+      </div>
+
+      <div class="news-item">
+        <img src="Canva.png" alt="AI Integration in Web Design">
+        <h2><a href="https://www.lifewire.com/canva-new-features-ai-dream-lab-8732296?utm_source=chatgpt.com" target="_blank">AI Integration in Web Design</a></h2>
+        <p>Canva's Dream Lab enables designers to create custom AI-generated images directly within the platform, speeding up design workflows.</p>
+      </div>
+      <div class="news-item">
+        <img src="Web development tools.png" alt="Advancements in Web Development Tools">
+        <h2><a href="https://thenewstack.io/web-development-in-2023-javascript-still-rules-ai-emerges/" target="_blank">Advancements in Web Development Tools</a></h2>
+        <p>The emergence of cloud development environments (CDEs) has streamlined remote development. Platforms like GitHub Codespaces have gained popularity, with about 42% of developers using CDEs for remote work.</p>
+    </div>
+
+    <div class="news-item">
+        <img src="The-Importance-of-Updating-a-Website-Regularly.png" alt="Emphasis on Website Security">
+        <h2><a href="https://www.theedigital.com/blog/update-your-website-regularly" target="_blank">Emphasis on Website Security</a></h2>
+        <p>Regular website maintenance is essential for security and performance. Keeping your website updated protects against evolving cyber threats and ensures a smooth user experience.</p>
+    </div>
+
+    <div class="news-item">
+        <img src="Latest-Web-Design-Trends-and-Standards.jpg"Evolution of Web Design Trends">
+        <h2><a href="https://www.wix.com/blog/web-design-trends" target="_blank">Evolution of Web Design Trends</a></h2>
+        <p>Current trends include dynamic animations, interactive elements, and the use of bold color schemes to enhance user engagement. Incorporating these trends can make websites more visually appealing and user-friendly.</p>
+    </div>
+
+    <div class="news-item">
+        <img src="AI IMAPACT.jfif" alt="Impact of Google's AI-Organized Search">
+        <h2><a href="https://www.businessinsider.com/google-search-lens-ai-gemini-overviews-new-features-2024-10?utm_source=chatgpt.com" target="_blank">Impact of Google's AI-Organized Search</a></h2>
+        <p>Google's new AI-driven search features are changing how content is displayed and accessed. Understanding these changes is vital for optimizing website content and maintaining visibility in search results.</p>
+    </div>
+
+    <div class="news-item">
+        <img src="ETSY'S ALGORITHUM.jfif" alt="Etsy's Algorithm Update">
+        <h2><a href="https://www.growingyourcraft.com/blog/etsy-october-2024-algorithm-update" target="_blank">Etsy's Algorithm Update</a></h2>
+        <p>Etsy has updated its search algorithm as of October 1, 2024, affecting product visibility. Sellers should adjust their listings to align with these changes to maintain optimal search rankings.</p>
+    </div>
+
+    <div class="news-item">
+        <img src="microsoft-patch-tuesday-red.png" alt="Microsoft's October 2024 Patch Tuesday">
+        <h2><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2024-patch-tuesday-fixes-5-zero-days-118-flaws/" target="_blank">Microsoft's October 2024 Patch Tuesday</a></h2>
+        <p>Microsoft addressed several security vulnerabilities in its latest Patch Tuesday release. Ensuring your website and associated software are updated with these patches is critical for maintaining security.</p>
+    </div>
+
+    <div class="news-item">
+        <img src="Sneaks1-3932587ec9ec4a7fbf8f0421fcad5a0b.png" alt="Introduction of AI in Creative Tools">
+        <h2><a href="https://www.lifewire.com/adobe-sneaks-ai-powered-tools-preview-8729590?utm_source=chatgpt.com" target="_blank">Introduction of AI in Creative Tools</a></h2>
+        <p>Adobe has showcased new AI-powered tools designed to enhance creative workflows, including features that can transform sketches into full designs and generate sounds from textual descriptions. These advancements can significantly streamline the design process.</p>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
+<!--    <div class="news-item">
+        <img src="Apple-Business-Connect-3up-5ccb07b53522487f8c64204438776584.png" alt="Expansion of Apple's Business Connect">
+        <h2><a href="https://www.lifewire.com/apple-business-connect-free-small-businesses-8730472?utm_source=chatgpt.com" target="_blank">Expansion of Apple's Business Connect</a></h2>
+        <p>Apple has expanded its free Business Connect service to include small businesses without physical locations, allowing them to share their logos and details across Apple services like Apple Wallet, Maps, and Mail. This enables small businesses to reach over 1 billion Apple device users and create a consistent brand presence.</p>
+    </div>-->

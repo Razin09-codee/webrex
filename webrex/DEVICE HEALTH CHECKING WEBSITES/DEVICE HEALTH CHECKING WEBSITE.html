@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Device Health Check Tools</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fefefe, #e9ecef);
+      background-size: 400% 400%;
+      animation: gradientMove 16s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-top: 30px;
+      color: #111;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      padding: 40px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 25px rgba(0, 140, 255, 0.2);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(0, 140, 255, 0.08);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease, opacity 0.6s ease;
+      opacity: 0;
+      z-index: 0;
+    }
+
+    .card:hover::before {
+      width: 200%;
+      height: 200%;
+      opacity: 1;
+    }
+
+    .card img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1) rotate(1deg);
+      filter: drop-shadow(0 0 6px rgba(0, 140, 255, 0.3));
+    }
+
+    .card p {
+      margin-top: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: #2b2b2b;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      .card img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Device Health Check Websites</h1>
+  <div class="grid">
+    <a class="card" href="DEVICE HEALTH CHECKING WEBSITES/Speedtest_by_Ookla.html">
+      <img src="Speedtest_by_Ookla.png" alt="Speedtest by Ookla">
+      <p>SPEEDTEST</p>
+    </a>
+    <a class="card" href="DEVICE HEALTH CHECKING WEBSITES/HWMONITOR.html">
+      <img src="HWMONITOR.png" alt="HWMONITOR">
+      <p>HWMONITOR</p>
+    </a>
+    <a class="card" href="DEVICE HEALTH CHECKING WEBSITES/Jotti.html">
+      <img src="Jotti.jpg" alt="Jotti">
+      <p>JOTTI</p>
+    </a>
+    <a class="card" href="DEVICE HEALTH CHECKING WEBSITES/CPU_EXPERT.html">
+      <img src="CPU_EXPERT.jpg" alt="CPU Expert">
+      <p>CPU EXPERT</p>
+    </a>
+    <a class="card" href="DEVICE HEALTH CHECKING WEBSITES/Speccy.html">
+      <img src="Speccy.png" alt="Speccy">
+      <p>SPECCY</p>
+    </a>
+    <a class="card" href="DEVICE HEALTH CHECKING WEBSITES/VirusTotal.html">
+      <img src="VirusTotal.jpg" alt="VirusTotal">
+      <p>VIRUSTOTAL</p>
+    </a>
+    <a class="card" href="DEVICE HEALTH CHECKING WEBSITES/whatismyip.html">
+      <img src="whatismyip.jpg" alt="What is my IP">
+      <p>WHAT IS MY IP</p>
+    </a>
+    <a class="card" href="DEVICE HEALTH CHECKING WEBSITES/Crucial_System_Scanner.html">
+      <img src="Crucial_System_Scanner.jpg" alt="Crucial System Scanner">
+      <p>CRUCIAL SCANNER</p>
+    </a>
+    <a class="card" href="DEVICE HEALTH CHECKING WEBSITES/Can_You_Run_it.html">
+      <img src="Can_You_Run_it.jpg" alt="Can You Run It">
+      <p>CAN YOU RUN IT</p>
+    </a>
+  </div>
+</body>
+</html>
+

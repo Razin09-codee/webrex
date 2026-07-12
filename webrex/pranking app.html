@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WEBREX – Pranks</title>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1c1f2b, #2f2d3e);
+      color: white;
+      animation: bgShift 20s ease infinite;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 40px;
+      color: #ffffff;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #2b2d3a;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.12);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease, opacity 0.4s;
+      opacity: 0;
+    }
+
+    .card:hover::before {
+      width: 200%;
+      height: 200%;
+      opacity: 1;
+    }
+
+    .card img {
+      width: 90px;
+      height: 90px;
+      border-radius: 14px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card p {
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 600px) {
+      .card img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Prank & Fun Tools</h1>
+
+  <nav class="main-nav">
+    <div class="card" data-aos="fade-up">
+      <img src="fake chat.png" alt="Fake Chat" />
+      <p>FAKE CHAT</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="50">
+      <img src="lie detector.jfif" alt="Lie Detector" />
+      <p>LIE DETECTOR</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <img src="cracked screeen.png" alt="Cracked Screen" />
+      <p>CRACKED SCREEN</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="150">
+      <img src="stock gun.png" alt="Shock Gun" />
+      <p>SHOCK GUN</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <img src="fake call.png" alt="Fake Call" />
+      <p>FAKE CALL</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="250">
+      <img src="voice changer.jfif" alt="Voice Changer" />
+      <p>VOICE CHANGER</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <img src="ghost pranks.webp" alt="Ghost Pranks" />
+      <p>GHOST PRANKS</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="350">
+      <img src="hair clipper.jfif" alt="Hair Clipper" />
+      <p>HAIR CLIPPER</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <img src="fight edito.png" alt="Fight Editor" />
+      <p>FIGHT EDITOR</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="450">
+      <img src="fake gps.webp" alt="Fake GPS" />
+      <p>FAKE GPS</p>
+    </div>
+  </nav>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEBREX | Investment Platforms</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      color: #222;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #111;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .card {
+      position: relative;
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px 15px;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      border: 1.5px solid #e2e2e2;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(0, 119, 255, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: width 0.5s ease, height 0.5s ease, opacity 0.4s ease;
+      z-index: 0;
+    }
+
+    .card:hover::before {
+      width: 300px;
+      height: 300px;
+      opacity: 1;
+    }
+
+    .card:hover {
+      border-color: #0077ff;
+      box-shadow: 0 6px 20px rgba(0, 119, 255, 0.1);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.08);
+    }
+
+    .card p {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+      z-index: 1;
+      color: #333;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card {
+        padding: 20px 10px;
+      }
+
+      .card img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Top Investment & Stock Platforms</h1>
+  <div class="grid">
+    <a class="card" href="#"><img src="prostocks.jpg" alt="Prostocks"><p>PROSTOCKS</p></a>
+    <a class="card" href="#"><img src="groww.png" alt="Groww"><p>GROWW</p></a>
+    <a class="card" href="#"><img src="erodha-kite.png" alt="Zerodha Kite"><p>ZERODHA KITE</p></a>
+    <a class="card" href="#"><img src="angel-one.jpg" alt="Angel One"><p>ANGEL ONE</p></a>
+    <a class="card" href="#"><img src="upstocks.png" alt="Upstox"><p>UPSTOCKS</p></a>
+    <a class="card" href="#"><img src="icic.png" alt="ICICI Bank"><p>ICICI BANK</p></a>
+    <a class="card" href="#"><img src="kotak.png" alt="Kotak"><p>KOTAK</p></a>
+    <a class="card" href="#"><img src="invest right.jpg" alt="Invest Right"><p>INVEST RIGHT</p></a>
+    <a class="card" href="#"><img src="sbi.png" alt="SBI Bank"><p>SBI BANK</p></a>
+    <a class="card" href="#"><img src="dhan.jpg" alt="Dhan"><p>DHAN</p></a>
+  </div>
+</body>
+</html>

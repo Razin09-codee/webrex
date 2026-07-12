@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The New York Times - Delivering quality journalism, news, and analysis from around the world.">
+    <meta name="keywords" content="New York Times, news, journalism, media, culture, analysis, reporting">
+    <title>About The New York Times - Elegant Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            max-width: 800px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        h1 {
+            color: #c00000;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            animation: slideIn 1s forwards;
+            opacity: 0;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .quote {
+            font-style: italic;
+            color: #777;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About The New York Times</h1>
+        <a href="https://www.nytimes.com/"><img src="New_york_times.png" alt="The New York Times Logo"></a>
+        <p class="quote">"All the news that's fit to print." - The New York Times</p>
+        <p>The New York Times, founded in 1851, is an influential American newspaper known for its comprehensive coverage of national and international news. With a reputation for quality journalism, it provides in-depth reporting on various topics, including politics, business, culture, and science.</p>
+        <p>The New York Times has won numerous Pulitzer Prizes for its investigative reporting and cultural criticism. It continues to be a vital source of information and analysis, adapting to the digital age while maintaining its commitment to journalistic excellence.</p>
+        <p>Through its print and online platforms, The New York Times aims to inform, educate, and engage its readers, fostering a well-informed public and promoting democratic values.</p>
+    </div>
+</body>
+</html>

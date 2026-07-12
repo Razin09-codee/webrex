@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WEBREX | Horror Zone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #f5f5f5;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ff2e63;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #ff2e63;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 24px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 24px 16px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      border: 1.5px solid #333;
+      transition: 0.3s ease;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 3px 10px rgba(255, 46, 99, 0.1);
+    }
+
+    .card:hover {
+      border-color: #ff2e63;
+      box-shadow: 0 6px 25px rgba(255, 46, 99, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 46, 99, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 0.5s ease;
+      z-index: 0;
+    }
+
+    .card:hover::before {
+      width: 250px;
+      height: 250px;
+      opacity: 1;
+    }
+
+    .card img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      margin-bottom: 14px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card p {
+      font-size: 1rem;
+      font-weight: 600;
+      z-index: 1;
+      position: relative;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .card img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Horror Websites</h1>
+  <div class="grid">
+    <a class="card" href="SHUDDER.html"><img src="SHUDDER.png" alt="Shudder"><p>Shudder</p></a>
+    <a class="card" href="Hashima_Island.html"><img src="Hashima_Island.jpg" alt="Hashima Island"><p>Hashima Island</p></a>
+    <a class="card" href="NIGHTMARE.html"><img src="NIGHTMARE.png" alt="Nightmare"><p>Nightmare</p></a>
+    <a class="card" href="CRY_OF_FEAR.html"><img src="CRY_OF_FEAR.png" alt="Cry of Fear"><p>Cry of Fear</p></a>
+    <a class="card" href="Amnesia_The_Dark_Descent.html"><img src="Amnesia_The_Dark_Descent.png" alt="Amnesia"><p>Amnesia: The Dark Descent</p></a>
+    <a class="card" href="Creepypasta.html"><img src="Creepypasta.png" alt="Creepypasta"><p>Creepypasta</p></a>
+    <a class="card" href="The_Darkest_Blog.html"><img src="The_Darkest_Blog.png" alt="The Darkest Blog"><p>The Darkest Blog</p></a>
+    <a class="card" href="SHUT_UP_AND_GO_TO_BED.html"><img src="SHUT_UP_AND_GO_TO_BED.png" alt="Shut Up and Go to Bed"><p>Shut Up and Go to Bed</p></a>
+    <a class="card" href="FrightFind.html"><img src="FrightFind.png" alt="FrightFind"><p>FrightFind</p></a>
+    <a class="card" href="Homicide_Monitor.html"><img src="Homicide_Monitor.png" alt="Homicide Monitor"><p>Homicide Monitor</p></a>
+  </div>
+</body>
+</html>

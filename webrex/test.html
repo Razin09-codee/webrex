@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | WEBREX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      height: 100vh;
+      display: flex;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bg-side {
+      flex: 1;
+      background-image: url(file:///E:/Downloads/webrex/bg%20sign%20up.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .signup-container {
+      flex: 1;
+      background-color: #1a1a1a;
+      padding: 40px;
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      box-shadow: -6px 0 20px rgba(0,0,0,0.5);
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      background-color: #222;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #555;
+    }
+
+    .signup-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .signup-btn:hover {
+      background-color: #0056cc;
+    }
+
+    .or-divider {
+      text-align: center;
+      margin: 20px 0;
+      color: #888;
+      position: relative;
+      width: 100%;
+    }
+
+    .or-divider::before,
+    .or-divider::after {
+      content: "";
+      height: 1px;
+      width: 40%;
+      background: #333;
+      position: absolute;
+      top: 50%;
+    }
+
+    .or-divider::before {
+      left: 0;
+    }
+
+    .or-divider::after {
+      right: 0;
+    }
+
+    .social-btn {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      background-color: #2c2c2c;
+      color: white;
+      border: 1px solid #444;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .social-btn img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .social-btn:hover {
+      background-color: #3a3a3a;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .bg-side {
+        display: none;
+      }
+      .signup-container {
+        flex: none;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="bg-side"></div>
+    <div class="signup-container">
+      <h2>Create Your Account</h2>
+      <form action="#" method="post" style="width:100%;">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class="signup-btn">Sign Up</button>
+      </form>
+
+      <div class="or-divider">OR</div>
+
+      <!-- Social Buttons -->
+      <button class="social-btn" onclick="alert('Google Sign Up (to be integrated)')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google"> Sign up with Google
+      </button>
+
+      <button class="social-btn" onclick="alert('Microsoft Sign Up (to be integrated)')">
+        <img src="binglogo.jpg" alt="Microsoft"> Sign up with Microsoft
+      </button>
+
+      <button class="social-btn" onclick="alert('GitHub Sign Up (to be integrated)')">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"> Sign up with GitHub
+      </button>
+
+      <div class="login-link">
+        Already have an account? <a href="login.html">Log in</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

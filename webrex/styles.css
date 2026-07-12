@@ -1,0 +1,1686 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+.BODY{
+    background-color: #CAE0ED;
+    overflow-x: hidden;
+}
+#search { 
+    width: 200px; 
+    padding: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 20px; /* Curved border */
+    outline: none; 
+    transition: border-color 0.3s;
+    transform: scale(2);
+    position: relative;
+    bottom: 1.2cm;
+    left: 3.5cm;
+    opacity: 0.7;
+}
+#search:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+/* .diwaloween{
+    
+    position: relative;
+    bottom: -2cm;
+    left: 14.5cm;
+} */
+.NA{
+    height: 1cm;
+    width: 40cm;
+    background-color: #CBC3E3;
+    position: relative;
+    bottom: 0.5cm;
+    right: 2cm;
+}
+.NB{
+    height: 1.5cm;
+    width: 40cm;
+    background-color: #99A5B1;
+    position: relative;
+    bottom: 0.5cm;
+    right: 2cm;
+}
+.NC{
+    position: relative;
+    right: 5.1cm;
+}
+.A{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -1cm;
+    right: -5cm;
+   
+}
+.google-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -1cm;
+    right: 19.5cm;
+    transform: scale(0.5);
+}   
+.Asub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.B{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.04cm;
+   
+}
+.bing-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Bsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.C{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+.yahoo-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Csub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.D{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+.baidu-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Dsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.E{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+.yandex-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Esub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.F{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+.duckduckgo-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Fsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.G{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+.ask-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Gsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.H{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+.naver-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Hsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.I{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+.aol-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Isub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.J{
+    z-index: 1;
+    height: 4cm;
+    width: 25cm;
+    background-color: #f8f4eb;
+    position: relative;
+    bottom: -0.5cm;
+    right: 0.09cm;
+   
+}
+.seznam-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Jsub{
+    height: 4cm;
+    width: 5cm; 
+    background-color: white;
+}
+.all-nav{
+    position: relative;
+    left: 1cm;
+}
+
+/* game*/
+
+.call-of-duty-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -1cm;
+    right: 19.5cm;
+    transform: scale(0.5);
+} 
+.fornite-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -3.4cm;
+    right: 17.2cm;
+    transform: scale(0.3);
+}  
+.league-of-legends-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -10cm;
+    right: -8cm;
+    transform: scale(0.07);
+} 
+.minecraft-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -3cm;
+    right: 17.4cm;
+    transform: scale(0.2);
+} 
+.valorent-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -1.1cm;
+    right: 19.5cm;
+    transform: scale(0.5);
+}
+.Genshin-Impact-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -26.5cm;
+    right: -28.4cm;
+    transform: scale(0.04);
+}  
+.apex-legend-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -0.09cm;
+    right: 18.6cm;
+    transform: scale(0.4);
+} 
+.roblox-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -1cm;
+    right: 19.6cm;
+    transform: scale(0.3);
+} 
+.baldu-gat-3-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -2.2cm;
+    right: 16.1cm;
+    transform: scale(0.3);
+}
+.diablo-4-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: -1cm;
+    right: 19.6cm;
+    transform: scale(0.3);
+}    
+/* Entertainment */
+.prostocks-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.groww-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.kite-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.angle-one-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.upstocks-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.icic-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.kotak-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.invest-right-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.sbi-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.dhan-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+/* ai */
+.ChatGPT-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Gemini-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+}
+.Adobe_Firefly-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.Grammarly-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.photoshop-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.Synthesia-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.DeepBrain-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Copy_AI-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.Alli_AI-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Firefly-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+/* social media */
+.Instagram-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.Facebook-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.Tiktok-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.Youtube-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.Snapchat-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.Whatsapp-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Pinterest-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.X-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.LinkedIn-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Telegram-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+/* coding */
+.js-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.py-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.go-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.java-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.kot-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.php-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.C-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.swi-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.r-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.ruby-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+/* online website */
+.flipkart-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.amazon-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.myt-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.mee-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.aj-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.snp-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.ny-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.jio-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.tata-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.ppy-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+
+/* cringe */
+
+.cra-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.bh-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.yal-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.ut-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.hg-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.budget-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.way-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.int-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.only-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.bob-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+/* online game */
+.twich-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.opg-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.stem-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.robloxcom-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.gamemedia-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.ign-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.gamequarty-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.gamestop-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.coolmath-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.battlenet-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+
+/* pranking app */
+
+.fakechat-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.lie-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.cracked-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.shock-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.fakecall-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.voicec-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.ghost-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.hairc-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+} 
+.fight-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.fakegps-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+/* dating website */
+.Tinder-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Bumble-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.OnlyFans-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.hinge-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.aisle-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.clover-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Match-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Happn-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.Feeld-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.okcupid-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+/* education website */
+.Brainly-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.byjus-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Toppr-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.vedantu-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.yeschat-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Teachoo-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Udemy-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Cuemath-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.Khan_Academy-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Extramarks-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+/* music website */
+.Spotify-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Youtube_Music-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Amazon_music-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Apple_music-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Yandex-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Wynk-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Soundcloud-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Y2meta-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.shazam-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Audiomack-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+/* useless website */
+.The_Useless_Web-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.CAT_BOUNCE-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Paper_Toilet-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Pointer_Pointer-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Hacker_Typer-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Scream_into_the_Void-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.zoomquilt-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Endless_Horse-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.Find_The_Invisible_Cow-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Window_Swap-icon{
+     z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+/* news website */
+.BBC_NEWS-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.CNN_NEWS-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.The_Washington_Post-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.New_york_times-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Times_of_india-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Indian_express-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.FOX_NEWS-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.USA_TODAY-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.Google_News-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.msn-icon{
+     z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+/* chatbot */
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.chatbox-header {
+    background: #ff7518; /* Pumpkin color */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbox-body {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin: 5px 0;
+}
+
+.user {
+    align-self: flex-end;
+    background: #ff7518; /* User message color */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.bot {
+    align-self: flex-start;
+    background: #e0e0e0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #ff7518; /* Button color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e65c00; /* Darker pumpkin color */
+}
+
+/* Halloween-themed toggle button styles */
+#toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff7518, #a45dff); /* Orange to purple gradient */
+    color: white;
+    border: 2px solid #5a3d14; /* Darker pumpkin color */
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Creepster', cursive; /* Spooky font */
+    text-align: center;
+}
+
+#toggle-btn:hover {
+    transform: scale(1.1) rotate(10deg); /* Add rotation on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(135deg, #e65c00, #9a4fc0); /* Darker gradient */
+    animation: wiggle 0.3s; /* Wiggle effect */
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+/* pc health checker */
+.Speedtest_by_Ookla-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.HWMONITOR-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Jotti-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.lighthouse-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.CPU_EXPERT-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Speccy-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.VirusTotal-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.whatismyip-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.Crucial_System_Scanner-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Can_You_Run_it-icon{
+     z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+/* par */
+.PA{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transform: scale(2.5);
+    position: absolute;
+    bottom: 1.5cm;
+    right: 10cm;
+    color: black;
+}
+
+/* banking website */
+.HDFC-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.ICICI-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.SBI-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.PhonePe-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Axis_Bank-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.IDFC-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Paisabazaar-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}   
+.Kotak-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}  
+.LIC-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}
+.Bank_of_Baroda-icon{
+    z-index: 2;
+    position: absolute;
+    bottom: 0cm;
+    right: 20cm;
+    height: 4cm;
+    width: 5cm;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WEBREX – E-Commerce Platforms</title>
+
+  <!-- AOS Library for Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f1f3f6, #dbe9f4);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .title {
+      font-size: 2.5rem;
+      margin-top: 30px;
+      color: #111;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .tool {
+      background-color: #fff;
+      border-radius: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      padding: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .tool::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(0, 123, 255, 0.15);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease, opacity 0.6s ease;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .tool:hover::before {
+      width: 200%;
+      height: 200%;
+      opacity: 1;
+    }
+
+    .tool * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tool-name {
+      font-weight: 600;
+      margin: 14px 0 12px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #2b2b2b;
+    }
+
+    .tool-icon {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      border-radius: 14px;
+      transition: transform 0.3s ease;
+      background: white;
+      padding: 5px;
+    }
+
+    .tool:hover .tool-icon {
+      transform: scale(1.12) rotate(2deg);
+      filter: drop-shadow(0 0 6px #2e8bff80);
+    }
+
+    @media (max-width: 600px) {
+      .tool {
+        padding: 16px;
+      }
+      .tool-icon {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">E-Commerce Platforms</h1>
+  <nav class="main-nav">
+
+    <a href="#" class="tool" data-aos="fade-up">
+      <p class="tool-name">Flipkart</p>
+      <img src="flipkart.jpg" class="tool-icon" alt="Flipkart"/>
+    </a>
+
+    <a href="#" class="tool" data-aos="fade-up" data-aos-delay="50">
+      <p class="tool-name">Amazon</p>
+      <img src="amazon.png" class="tool-icon" alt="Amazon"/>
+    </a>
+
+    <a href="#" class="tool" data-aos="fade-up" data-aos-delay="100">
+      <p class="tool-name">Myntra</p>
+      <img src="myntra.jpg" class="tool-icon" alt="Myntra"/>
+    </a>
+
+    <a href="#" class="tool" data-aos="fade-up" data-aos-delay="150">
+      <p class="tool-name">Meesho</p>
+      <img src="meesho.png" class="tool-icon" alt="Meesho"/>
+    </a>
+
+    <a href="#" class="tool" data-aos="fade-up" data-aos-delay="200">
+      <p class="tool-name">Ajio</p>
+      <img src="ajio.png" class="tool-icon" alt="Ajio"/>
+    </a>
+
+    <a href="#" class="tool" data-aos="fade-up" data-aos-delay="250">
+      <p class="tool-name">Snapdeal</p>
+      <img src="snapdeal.jpg" class="tool-icon" alt="Snapdeal"/>
+    </a>
+
+    <a href="#" class="tool" data-aos="fade-up" data-aos-delay="300">
+      <p class="tool-name">Nykaa</p>
+      <img src="nykaa.png" class="tool-icon" alt="Nykaa"/>
+    </a>
+
+    <a href="#" class="tool" data-aos="fade-up" data-aos-delay="350">
+      <p class="tool-name">JioMart</p>
+      <img src="jiomart.png" class="tool-icon" alt="JioMart"/>
+    </a>
+
+    <a href="#" class="tool" data-aos="fade-up" data-aos-delay="400">
+      <p class="tool-name">Tata</p>
+      <img src="tata.png" class="tool-icon" alt="Tata"/>
+    </a>
+
+    <a href="#" class="tool" data-aos="fade-up" data-aos-delay="450">
+      <p class="tool-name">Pepperfry</p>
+      <img src="pepperfly.jpg" class="tool-icon" alt="Pepperfry"/>
+    </a>
+
+  </nav>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>

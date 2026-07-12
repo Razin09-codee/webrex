@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Google News - Your source for the latest news and headlines from around the world.">
+    <meta name="keywords" content="Google News, news, journalism, media, headlines, articles">
+    <title>About Google News - Elegant Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            max-width: 800px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        h1 {
+            color: #4285f4;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            animation: slideIn 1s forwards;
+            opacity: 0;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .quote {
+            font-style: italic;
+            color: #777;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Google News</h1>
+        <a href="https://news.google.com/"><img src="Google_News.png" alt="Google News Logo"></a>
+        <p class="quote">"Stay informed with the latest news." - Google News</p>
+        <p>Google News is a news aggregator service developed by Google. It organizes and highlights the latest news stories from various sources around the world, providing a comprehensive view of current events.</p>
+        <p>Launched in 2002, Google News uses algorithms to curate articles based on users' interests, ensuring that readers get timely and relevant information. The platform covers a wide range of topics, including politics, technology, health, and entertainment.</p>
+        <p>With its user-friendly interface and personalized news feeds, Google News aims to keep users informed and engaged with the most important stories happening globally.</p>
+    </div>
+</body>
+</html>

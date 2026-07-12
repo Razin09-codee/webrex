@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WEBREX | Fun Web Tools</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #222;
+      letter-spacing: 1px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .card {
+      position: relative;
+      background-color: #ffffff;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 16px;
+      padding: 30px 15px;
+      text-align: center;
+      text-decoration: none;
+      color: #222;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(0, 123, 255, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: width 0.5s ease, height 0.5s ease, opacity 0.4s ease;
+      z-index: 0;
+    }
+
+    .card:hover::before {
+      width: 300px;
+      height: 300px;
+      opacity: 1;
+    }
+
+    .card:hover {
+      border-color: #007bff;
+      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.1);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.08);
+    }
+
+    .card p {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+      z-index: 1;
+      color: #333;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card {
+        padding: 20px 10px;
+      }
+
+      .card img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Fun & Quirky Web Tools</h1>
+  <div class="grid">
+    <a class="card" href="#"><img src="The_Useless_Web.jpg" alt="The Useless Web"><p>THE USELESS WEB</p></a>
+    <a class="card" href="#"><img src="CAT_BOUNCE.png" alt="Cat Bounce"><p>CAT BOUNCE</p></a>
+    <a class="card" href="#"><img src="Paper_Toilet.png" alt="Paper Toilet"><p>PAPER TOILET</p></a>
+    <a class="card" href="#"><img src="Pointer_Pointer.jpg" alt="Pointer Pointer"><p>POINTER POINTER</p></a>
+    <a class="card" href="#"><img src="Hacker_Typer.png" alt="Hacker Typer"><p>HACKER TYPER</p></a>
+    <a class="card" href="#"><img src="Scream_into_the_Void.jpg" alt="Scream into the Void"><p>SCREAM INTO THE VOID</p></a>
+    <a class="card" href="#"><img src="zoomquilt.jpg" alt="ZoomQuilt"><p>ZOOMQUILT</p></a>
+    <a class="card" href="#"><img src="Endless_Horse.jpg" alt="Endless Horse"><p>ENDLESS HORSE</p></a>
+    <a class="card" href="#"><img src="Find_The_Invisible_Cow.jpg" alt="Invisible Cow"><p>INVISIBLE COW</p></a>
+    <a class="card" href="#"><img src="Window_Swap.jpg" alt="Window Swap"><p>WINDOW SWAP</p></a>
+  </div>
+</body>
+</html>

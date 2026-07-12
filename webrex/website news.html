@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Source News Aggregator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        #source-selector {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        #source-selector select {
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        .article {
+            background-color: #fff;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .article h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .article p {
+            color: #666;
+        }
+
+        .article a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .article a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>News Aggregator</h1>
+    </header>
+
+    <div id="source-selector">
+        <label for="news-source">Choose a News Source:</label>
+        <select id="news-source">
+            <option value="bbc-news">BBC News</option>
+            <option value="cnn">CNN</option>
+            <option value="the-verge">The Verge</option>
+            <option value="al-jazeera-english">Al Jazeera</option>
+            <option value="associated-press">Associated Press</option>
+        </select>
+    </div>
+
+    <div class="container" id="news-container">
+        <p>Loading news...</p>
+    </div>
+
+    <script>
+        const apiKey = '7d5dc08a74324a8c81da3663c686f619';  // Replace with your actual API key
+        const newsSourceSelect = document.getElementById('news-source');
+        const newsContainer = document.getElementById('news-container');
+
+        // Function to fetch news based on selected source
+        async function fetchNews(source = 'bbc-news') {
+            const apiUrl = `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`;
+            newsContainer.innerHTML = '<p>Loading news...</p>';
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                // Check if we have articles to display
+                if (data.articles && data.articles.length > 0) {
+                    displayNews(data.articles);
+                } else {
+                    newsContainer.innerHTML = '<p>No news available for this source.</p>';
+                }
+            } catch (error) {
+                console.error('Error fetching news:', error);
+                newsContainer.innerHTML = '<p>Failed to load news.</p>';
+            }
+        }
+
+        // Function to display news articles
+        function displayNews(articles) {
+            newsContainer.innerHTML = '';  // Clear any existing content
+
+            articles.forEach(article => {
+                const articleDiv = document.createElement('div');
+                articleDiv.classList.add('article');
+
+                articleDiv.innerHTML = `
+                    <h3>${article.title}</h3>
+                    <p>${article.description || 'No description available.'}</p>
+                    <a href="${article.url}" target="_blank">Read more</a>
+                `;
+
+                newsContainer.appendChild(articleDiv);
+            });
+        }
+
+        // Fetch news when the page loads
+        fetchNews();
+
+        // Event listener to fetch news based on selected source
+        newsSourceSelect.addEventListener('change', (e) => {
+            const selectedSource = e.target.value;
+            fetchNews(selectedSource);
+        });
+    </script>
+
+</body>
+</html>

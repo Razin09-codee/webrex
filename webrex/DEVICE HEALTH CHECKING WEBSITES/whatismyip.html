@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What Is My IP - A simple tool to check your public IP address.">
+    <meta name="keywords" content="IP address, check IP, what is my IP, network tools">
+    <title>About What Is My IP - Elegant Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            max-width: 800px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        h1 {
+            color: #007bff; /* Change color for the title */
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            animation: slideIn 1s forwards;
+            opacity: 0;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .quote {
+            font-style: italic;
+            color: #777;
+            margin: 20px 0;
+        }
+        .ip-address {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #dc3545; /* Change color for IP address display */
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>What Is My IP Address?</h1>
+        <img src="whatismyip.jpg" alt="What Is My IP Logo" /> <!-- Placeholder for the image -->
+        <p class="ip-address" id="ip"></p>
+        <p class="quote">"Stay secure online!" - What Is My IP</p>
+        <p>What Is My IP is a simple tool that helps you discover your public IP address quickly and easily. Knowing your IP address can be crucial for network configuration, troubleshooting, and ensuring your security online.</p>
+        <p>This service provides an intuitive interface, making it accessible for both tech-savvy users and those who are less familiar with networking. By simply visiting the site, you can see your IP address and some additional information about your network connection.</p>
+        <p>Whether you are a gamer, a streamer, or just browsing the internet, understanding your IP address can help you maintain your online privacy and security.</p>
+    </div>
+
+    <script>
+        function fetchIP() {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip').innerText = data.ip;
+                })
+                .catch(err => {
+                    document.getElementById('ip').innerText = 'Unable to fetch IP address';
+                });
+        }
+
+        // Fetch IP on page load
+        window.onload = fetchIP;
+    </script>
+</body>
+</html>

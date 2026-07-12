@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WEBREX – Featured</title>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #dce3ec);
+      background-size: 300% 300%;
+      animation: animateBG 20s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes animateBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .title {
+      font-size: 2.5rem;
+      margin-top: 30px;
+      font-weight: 700;
+      text-align: center;
+      color: #222;
+    }
+
+    .main-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      padding: 40px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .tool {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .tool:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .tool::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(60, 90, 255, 0.08);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s, height 0.4s, opacity 0.4s;
+      opacity: 0;
+      z-index: 0;
+    }
+
+    .tool:hover::before {
+      width: 200%;
+      height: 200%;
+      opacity: 1;
+    }
+
+    .tool::after {
+      content: '';
+      position: absolute;
+      top: var(--y, 50%);
+      left: var(--x, 50%);
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle at center, rgba(60, 90, 255, 0.1) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      transition: background 0.2s;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .tool:hover::after {
+      opacity: 1;
+    }
+
+    .tool * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tool-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tool-icon {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .tool:hover .tool-icon {
+      transform: scale(1.1) rotate(2deg);
+    }
+
+    @media (max-width: 600px) {
+      .tool-icon {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Featured Picks</h1>
+  <nav class="main-nav">
+
+    <a href="#" class="tool" data-aos="zoom-in">
+      <img src="craigslist.png" alt="Craigslist" class="tool-icon">
+      <p class="tool-name">Craigslist</p>
+    </a>
+
+    <a href="#" class="tool" data-aos="zoom-in" data-aos-delay="50">
+      <img src="BH.png" alt="BH" class="tool-icon">
+      <p class="tool-name">BH</p>
+    </a>
+
+    <a href="#" class="tool" data-aos="zoom-in" data-aos-delay="100">
+      <img src="yale art.png" alt="Yale Art" class="tool-icon">
+      <p class="tool-name">Yale School of Art</p>
+    </a>
+
+    <a href="#" class="tool" data-aos="zoom-in" data-aos-delay="150">
+      <img src="uny of adv tec.jfif" alt="UAT" class="tool-icon">
+      <p class="tool-name">UAT</p>
+    </a>
+
+    <a href="#" class="tool" data-aos="zoom-in" data-aos-delay="200">
+      <img src="the hunger game.jpg" alt="Hunger Game" class="tool-icon">
+      <p class="tool-name">The Hunger Game</p>
+    </a>
+
+    <a href="#" class="tool" data-aos="zoom-in" data-aos-delay="250">
+      <img src="budget.png" alt="Budget" class="tool-icon">
+      <p class="tool-name">Budget</p>
+    </a>
+
+    <a href="#" class="tool" data-aos="zoom-in" data-aos-delay="300">
+      <img src="wayback mach.jpg" alt="Wayback" class="tool-icon">
+      <p class="tool-name">Wayback Machine</p>
+    </a>
+
+    <a href="#" class="tool" data-aos="zoom-in" data-aos-delay="350">
+      <img src="interputer.webp" alt="Interputer" class="tool-icon">
+      <p class="tool-name">Interrupter</p>
+    </a>
+
+    <a href="#" class="tool" data-aos="zoom-in" data-aos-delay="400">
+      <img src="one an donly.jfif" alt="Sparkella" class="tool-icon">
+      <p class="tool-name">Sparkella</p>
+    </a>
+
+    <a href="#" class="tool" data-aos="zoom-in" data-aos-delay="450">
+      <img src="bob sageft.png" alt="Bob Saget" class="tool-icon">
+      <p class="tool-name">Bob Saget</p>
+    </a>
+
+  </nav>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    document.querySelectorAll('.tool').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty('--x', `${x}%`);
+        card.style.setProperty('--y', `${y}%`);
+      });
+    });
+  </script>
+</body>
+</html>

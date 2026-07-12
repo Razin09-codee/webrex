@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WEBREX - Social Platforms</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f1f3f6, #dbe9f4);
+      background-size: 400% 400%;
+      animation: gradientMove 14s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 30px;
+      color: #111;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      padding: 40px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(0, 140, 255, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease, opacity 0.6s ease;
+      opacity: 0;
+      z-index: 0;
+    }
+
+    .card:hover::before {
+      width: 200%;
+      height: 200%;
+      opacity: 1;
+    }
+
+    .card img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      border-radius: 14px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1) rotate(2deg);
+      filter: drop-shadow(0 0 6px rgba(0, 140, 255, 0.3));
+    }
+
+    .card p {
+      margin-top: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: #2b2b2b;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 16px;
+      }
+
+      .card img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Top Social Platforms</h1>
+  <div class="grid">
+    <div class="card">
+      <img src="google.png" alt="Google">
+      <p>GOOGLE</p>
+    </div>
+    <div class="card">
+      <img src="youtube.png" alt="YouTube">
+      <p>YOUTUBE</p>
+    </div>
+    <div class="card">
+      <img src="facebook.png" alt="Facebook">
+      <p>FACEBOOK</p>
+    </div>
+    <div class="card">
+      <img src="instagram.jpg" alt="Instagram">
+      <p>INSTAGRAM</p>
+    </div>
+    <div class="card">
+      <img src="twitter.png" alt="Twitter">
+      <p>TWITTER</p>
+    </div>
+    <div class="card">
+      <img src="WhatsApp2.png" alt="WhatsApp">
+      <p>WHATSAPP</p>
+    </div>
+    <div class="card">
+      <img src="wikipedia.jpg" alt="Wikipedia">
+      <p>WIKIPEDIA</p>
+    </div>
+    <div class="card">
+      <img src="yahoo.png" alt="Yahoo">
+      <p>YAHOO</p>
+    </div>
+    <div class="card">
+      <img src="reddit.png" alt="Reddit">
+      <p>REDDIT</p>
+    </div>
+    <div class="card">
+      <img src="yahoo japan.png" alt="Yahoo Japan">
+      <p>YAHOO JAPAN</p>
+    </div>
+  </div>
+</body>
+</html>
