@@ -400,7 +400,7 @@
         // AI Dynamic Search Logic via Search Input Element
         document.getElementById('search').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
-                e.preventDefault(); // Prevents the search form layout from breaking/reloading the page
+                e.preventDefault(); 
                 
                 const query = this.value.trim();
                 if (query === '') return;
@@ -411,11 +411,11 @@
                 addMessage(`Searching and building section for: "${query}"...`, 'user');
                 this.value = ''; 
 
-                // Send the instruction up to the remote backend server
+                // Send the instruction up to the remote backend server as JSON
                 fetch(BACKEND_URL, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: 'message=' + encodeURIComponent(`Generate a Top 10 webpage response array for: ${query}`)
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: `Generate a Top 10 webpage response array for: ${query}` })
                 })
                 .then(response => {
                     if (!response.ok) throw new Error();
@@ -453,7 +453,7 @@
         
         document.getElementById('user-input').addEventListener('keypress', function (event) {
             if (event.key === 'Enter') {
-                event.preventDefault(); // Prevents the chat app packet tracker from breaking/reloading the page
+                event.preventDefault(); 
                 sendMessage();
             }
         });
@@ -471,11 +471,11 @@
             addMessage(messageText, 'user');
             inputField.value = '';
 
-            // Routine messaging fallback pipeline linked to the remote engine
+            // Send messaging fallback pipeline as JSON
             fetch(BACKEND_URL, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: 'message=' + encodeURIComponent(messageText)
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: messageText })
             })
             .then(response => response.json())
             .then(data => {

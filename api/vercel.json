@@ -1,18 +1,13 @@
 {
   "functions": {
-    "api/*.php": {
+    "api/ai-handler.php": {
       "runtime": "vercel-php@0.9.0"
     }
   },
-  "headers": [
+  "routes": [
     {
-      "source": "/api/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Credentials", "value": "true" },
-        { "key": "Access-Control-Allow-Origin", "value": "https://razin09-codee.github.io" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
-        { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
-      ]
+      "src": "/api/ai-handler.php",
+      "dest": "/api/ai-handler.php"
     }
   ]
 }
