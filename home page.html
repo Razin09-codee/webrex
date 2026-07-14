@@ -395,27 +395,11 @@
     </div>
 
     <script>
-        // CONFIGURATION: Replace with your actual Google Gemini API Key
-        const GEMINI_API_KEY = "AQ.Ab8RN6LuTAlNvZcM8QCnFTOAQJfIWGsQTS5rGgyeUZ0aZ2-Nxw";
-        const GEMINI_MODEL = "gemini-2.5-flash";
-
-        // Helper function to hit Gemini API directly from Frontend
-        async function fetchFromGemini(promptText) {
-            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
-            const response = await fetch(endpoint, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    contents: [{ parts: [{ text: promptText }] }]
-                })
-            });
-            if (!response.ok) throw new Error(`API returned status code: ${response.status}`);
-            const data = await response.json();
-            return data.candidates[0].content.parts[0].text;
-        }
+        // ⚠️ EDIT THIS LINE: Paste your actual live Render app URL below
+        const BACKEND_URL = "https://your-render-app-name.onrender.com/search-engine.php";
 
         // AI Dynamic Search Logic via Search Input Element
-        document.getElementById('search').addEventListener('keypress', async function(e) {
+        document.getElementById('search').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 const query = this.value.trim();
                 if (query === '') return;
@@ -426,38 +410,35 @@
                 addMessage(`Searching and building section for: "${query}"...`, 'user');
                 this.value = ''; 
 
-                const systemPrompt = `You are a professional frontend web generator for the platform WEBREX. 
-The user searched for the topic: '${query}'. 
-Generate a beautiful, modern 'Top 10' responsive grid page strictly in HTML and inline CSS.
-
-Follow these design choices precisely:
-- Use a background gradient animation: linear-gradient(to right, #f1f3f6, #dbe9f4) with 400% size.
-- Title must be large, centered, and clean.
-- Create a main CSS grid container with 10 custom item cards matching the topic details.
-- Include smooth hover lift translation animations on the cards.
-- Incorporate AOS script configurations dynamically inside the header and footer blocks.
-- Every grid item anchor element must use an information href targeting back to a details route (e.g., href='info.php?item=ItemName').
-
-CRITICAL: Output ONLY the functional standalone code wrapped within a raw HTML document starting with <!DOCTYPE html>. Do not include markdown wraps like \`\`\`html or \`\`\`.`;
-
-                try {
-                    let htmlPayload = await fetchFromGemini(systemPrompt + "\n\nBuild the page now.");
-                    htmlPayload = htmlPayload.replace(/^```html\s*|```\s*$/gi, '').trim();
-
-                    addMessage("✨ Section rendered successfully! Opening page...", 'bot');
-                    
-                    const newWindow = window.open();
-                    if (newWindow) {
-                        newWindow.document.open();
-                        newWindow.document.write(htmlPayload);
-                        newWindow.document.close();
+                // Send the instruction up to the remote backend server
+                fetch(BACKEND_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: 'message=' + encodeURIComponent(`Generate a Top 10 webpage response array for: ${query}`)
+                })
+                .then(response => {
+                    if (!response.ok) throw new Error();
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.html_payload) {
+                        addMessage("✨ Section rendered successfully! Opening page...", 'bot');
+                        
+                        const newWindow = window.open();
+                        if (newWindow) {
+                            newWindow.document.open();
+                            newWindow.document.write(data.html_payload);
+                            newWindow.document.close();
+                        } else {
+                            addMessage("⚠️ Popup blocked! Please allow popups to open the generated layout panel.", 'bot');
+                        }
                     } else {
-                        addMessage("⚠️ Popup blocked! Please allow popups to open the dynamic view panel.", 'bot');
+                        addMessage(data.reply || "Could not generate a custom grid presentation for this keyword.", 'bot');
                     }
-                } catch (error) {
+                })
+                .catch(() => {
                     addMessage("⚠️ Failed to parse dynamic layout sequence from WEBREX engine.", 'bot');
-                    console.error(error);
-                }
+                });
             }
         });
 
@@ -478,7 +459,7 @@ CRITICAL: Output ONLY the functional standalone code wrapped within a raw HTML d
             document.getElementById('chatbox').style.display = 'none';
         });
 
-        async function sendMessage() {
+        function sendMessage() {
             const inputField = document.getElementById('user-input');
             const messageText = inputField.value.trim();
 
@@ -487,14 +468,19 @@ CRITICAL: Output ONLY the functional standalone code wrapped within a raw HTML d
             addMessage(messageText, 'user');
             inputField.value = '';
 
-            try {
-                const chatbotPrompt = `You are the friendly AI assistant for the WEBREX portal. Answer briefly: ${messageText}`;
-                const reply = await fetchFromGemini(chatbotPrompt);
-                addMessage(reply, 'bot');
-            } catch (error) {
+            // Routine messaging fallback pipeline linked to the remote engine
+            fetch(BACKEND_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'message=' + encodeURIComponent(messageText)
+            })
+            .then(response => response.json())
+            .then(data => {
+                addMessage(data.reply || "Sorry, I couldn't process that entry.", 'bot');
+            })
+            .catch(() => {
                 addMessage("⚠️ Sync interruption: Failed to contact AI node.", 'bot');
-                console.error(error);
-            }
+            });
         }
 
         function addMessage(text, sender) {
