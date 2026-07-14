@@ -12,7 +12,7 @@ if (empty($userMessage)) {
 }
 
 // 2. Define your Gemini Configuration
-$apiKey = "YOUR_GEMINI_API_KEY_HERE"; // <-- Put your Gemini API key here
+$apiKey = ""; // <-- Put your Gemini API key here
 $modelName = "gemini-2.5-flash"; // Fast, cost-efficient, and great at layout tasks
 
 // 3. Detect if this is an AI Page Generation Request
